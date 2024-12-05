@@ -1,5 +1,5 @@
 
-name: Generate Provenance
+name: Generate Provenance Multi
 
 on:
   workflow_dispatch:
