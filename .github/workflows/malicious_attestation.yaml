@@ -16,3 +16,7 @@ jobs:
         python-version: '3.13'
     - run: pip install sigstore
     - run: sigstore attest --predicate MODULE.bazel.predicate --predicate-type "https://slsa.dev/provenance/v1" MODULE.bazel
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.2
+      with:
+         name: MODULE.bazel.sigstore.json
