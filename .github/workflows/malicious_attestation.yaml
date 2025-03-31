@@ -1,4 +1,4 @@
-name: Generate Provenance
+name: Generate Provenance BZL
 
 on:
   workflow_dispatch:
