@@ -1,0 +1,19 @@
+name: Generate Provenance
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  generate-attestation:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      attestations: write
+    steps:
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+    - uses: actions/attest@v2
+      with:
+        subject-path: ./MODULE.bazel
+        predicate-type: https://slsa.dev/provenance/v1
+        predicate-path: ./MODULE.bazel.predicate
