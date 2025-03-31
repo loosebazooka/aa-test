@@ -15,4 +15,4 @@ jobs:
       with:
         python-version: '3.13'
     - run: pip install sigstore
-    - run: sigstore attest --predicate MODULE.bazel.payload --predicate-type "https://slsa.dev/provenance/v1" MODULE.bazel
+    - run: sigstore attest --predicate MODULE.bazel.predicate --predicate-type "https://slsa.dev/provenance/v1" MODULE.bazel
